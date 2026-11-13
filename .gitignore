@@ -1,0 +1,26 @@
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/local.properties
+android/.idea/
+*.iml
+.externalNativeBuild/
+captures/
+
+# Servidor
+server/.venv/
+__pycache__/
+*.pyc
+
+# ROM de prueba compilada (se regenera con tools/linktest-rom/build.sh)
+tools/linktest-rom/*.o
+tools/linktest-rom/*.elf
+
+# Nunca subir ROMs ni partidas comerciales
+*.sav
+*.state
+*.zip
+*.gba
+!tools/linktest-rom/linktest.gba

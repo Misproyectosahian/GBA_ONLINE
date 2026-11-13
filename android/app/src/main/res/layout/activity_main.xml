@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GBA Link Online"
+            android:textColor="@color/accent"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Cable link por Internet para jugar de a dos"
+            android:textColor="@color/text_dim"
+            android:textSize="14sp" />
+
+        <!-- Juego -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/CardTitle"
+                android:text="Juego" />
+
+            <TextView
+                android:id="@+id/romInfo"
+                style="@style/CardText" />
+
+            <Button
+                android:id="@+id/btnPickRom"
+                style="@style/SecondaryButton"
+                android:text="Elegir ROM (.gba o .zip)" />
+        </LinearLayout>
+
+        <!-- Partida guardada -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/CardTitle"
+                android:text="Partida guardada" />
+
+            <TextView
+                android:id="@+id/saveInfo"
+                style="@style/CardText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnImportSave"
+                    style="@style/SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Importar .sav" />
+
+                <Button
+                    android:id="@+id/btnExportSave"
+                    style="@style/SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Exportar .sav" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- En línea -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/CardTitle"
+                android:text="Jugar en línea" />
+
+            <EditText
+                android:id="@+id/nameInput"
+                style="@style/Input"
+                android:hint="Tu nombre (lo ve tu pareja)"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="24" />
+
+            <Button
+                android:id="@+id/btnHost"
+                style="@style/PrimaryButton"
+                android:text="Crear sala" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/codeInput"
+                    style="@style/Input"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:hint="Código (4 números)"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+                <Button
+                    android:id="@+id/btnJoin"
+                    style="@style/PrimaryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="0dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="Unirse" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Sin conexión -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/CardTitle"
+                android:text="Sin conexión" />
+
+            <Button
+                android:id="@+id/btnSolo"
+                style="@style/SecondaryButton"
+                android:text="Jugar solo" />
+
+            <Button
+                android:id="@+id/btnLocal2p"
+                style="@style/SecondaryButton"
+                android:text="Probar 2 jugadores en este teléfono" />
+        </LinearLayout>
+
+        <!-- Servidor -->
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/CardTitle"
+                android:text="Servidor" />
+
+            <EditText
+                android:id="@+id/serverInput"
+                style="@style/Input"
+                android:hint="wss://tu-servidor.onrender.com/ws"
+                android:inputType="textUri" />
+
+            <TextView
+                style="@style/CardText"
+                android:layout_marginTop="10dp"
+                android:text="Retraso de entrada (cuadros). Automático lo calcula con el ping al empezar." />
+
+            <Spinner
+                android:id="@+id/delaySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/text_dim"
+                android:popupBackground="@color/card_bg" />
+
+            <Button
+                android:id="@+id/btnTestServer"
+                style="@style/SecondaryButton"
+                android:text="Probar conexión" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Emulación: mGBA (MPL 2.0). Usá copias de tus propios cartuchos."
+            android:textColor="@color/text_dim"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

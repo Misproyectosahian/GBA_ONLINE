@@ -1,0 +1,15 @@
+# Configuración para Render (https://render.com): crea el servidor relay gratis.
+# En Render: New → Blueprint → elegir este repositorio. Lee este archivo solo.
+services:
+  - type: web
+    name: gba-link-relay
+    runtime: python
+    rootDir: server
+    plan: free
+    region: virginia
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8

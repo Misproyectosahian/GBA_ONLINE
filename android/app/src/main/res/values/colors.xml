@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_bg">#14121C</color>
+    <color name="card_bg">#221F2E</color>
+    <color name="game_bg">#0E0C14</color>
+    <color name="accent">#FF7EB6</color>
+    <color name="accent_dark">#D9578F</color>
+    <color name="text">#FFFFFF</color>
+    <color name="text_dim">#A8A3B8</color>
+    <color name="chat_panel_bg">#C8101018</color>
+    <color name="lobby_bg">#E6141220</color>
+</resources>
